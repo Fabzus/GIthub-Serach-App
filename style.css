@@ -1,0 +1,67 @@
+/* RESET */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@1,400;1,700&display=swap");
+:root[color-mode="light"] {
+  --body-bg-color-: #f6f8ff;
+  --head-color-: #222731;
+  --darklight-color-: #697c9a;
+  --search-bg-color-: white;
+  --search-color-: #4b6a9b;
+  --black: black;
+  --follow-color-: #4b6a9b;
+  --follow-total-color-: #2b3442;
+}
+:root[color-mode="dark"] {
+  --body-bg-color-: #141d2f;
+  --head-color-: #fff;
+  --darklight-color-: #fff;
+  --search-bg-color-: #1e2a47;
+  --search-color-: #fff;
+  --black: white;
+  --follow-bg-color-: #f6f8ff;
+  --follow-color-: white;
+  --follow-total-color-: #fff;
+  --social-color-: white;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Space Mono", monospace;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: var(--body-bg-color-);
+  width: 80%;
+  margin: auto;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* RESET */
+.container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* HEADER */
+/* HEADER */
+
+/* SEARCH */
+/* SEARCH */
+
+/* PROFILE */
+/* PROFILE */
