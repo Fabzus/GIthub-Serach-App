@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" color-mode="light">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -19,8 +19,8 @@
                 <img src="assets/icon-moon.svg" alt="" />
             </div>
             <div class="theme-btn dark--hidden">            
-                <i>Dark</i>
-                <img src="assets/icon-moon.svg" alt="" />
+                <i>light</i>
+                <img src="assets/icon-sun.svg" alt="" />
             </div>
 
           </div>
@@ -28,23 +28,29 @@
         <div class="search">
             <img src="assets/icon-search.svg" alt="" />
             <div class="search-bar">
-                <input type="text" placeholder="Hello text...">
+                <input type="text" placeholder="Search Github username..." value="">
+                
             </div>
-            <div class="search-button">search</div>
+            <div class="search-button">Search</div>
           </div>
         
         <div class="profile">
-            <div class="profile-pic"></div>
-            <div class="profile-data">
-                <div class="profile-name">
-                    <h2></h2>
-                    <span></span>
-                    <a href=""></a>
+
+                <div class="profile-header">
+                <div class="profile-pic">
+                    <a id="profilePic" href=""><img  src="assets/image-user-placeholder.png" alt=""></a>
                 </div>
-                <div class="profile-bio">
-                    <p></p>
+                <div class="profile-info">
+                    <h2 id="name">Name</h2>
+                    <span id="date">date joined</span>
+                    <a id="username" href="">@username</a>
                 </div>
-                <div class="profile-stats">
+            </div>
+            <div class="profile-main">
+                <div class="profile-bio main">
+                    <p id="bio">A bio goes here...</p>
+                </div>
+                <div class="profile-stats main">
                     <ul>
                         <li>Repos</li>
                         <li>8</li>
@@ -58,23 +64,23 @@
                         <li>9</li>
                     </ul>
                 </div>
-                <div class="profile-about"> 
+                <div class="profile-about main"> 
                     <div class="row">
-                        <div class="location">
+                        <div class="location row">
                             <img src="assets/icon-location.svg" alt="location">
                             <p>Not Available</p>
                         </div>
-                        <div class="twitter">
+                        <div class="twitter row">
                             <img src="assets/icon-twitter.svg" alt="twitter">
                             <p>Not Available</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="website">
+                        <div class="website row">
                             <img src="assets/icon-website.svg" alt="website">
                             <p>Not Available</p>
                         </div>
-                        <div class="company">
+                        <div class="company row">
                             <img src="assets/icon-company.svg" alt="company">
                             <p>Not Available</p>
                         </div>
