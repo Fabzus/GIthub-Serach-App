@@ -39,7 +39,7 @@ body {
   width: 80%;
   margin: auto;
   height: 100vh;
-  transition: background-color 0.6s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 ul {
@@ -54,13 +54,13 @@ li:nth-child(1) {
   font-weight: 400;
   font-size: 1.5rem;
   color: var(--follow-color-);
-  transition: color 0.6s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 li:nth-child(2) {
   font-weight: 700;
   font-size: 2.2rem;
   color: var(--follow-total-color-);
-  transition: color 0.6s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 a {
@@ -71,14 +71,28 @@ h1 {
   font-size: 2.6rem;
   font-weight: 700;
   color: var(--head-color-);
-  transition: color 0.6s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 h2 {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--follow-total-color-);
-  transition: color 0.6s ease-in-out;
+  transition: color 0.3s ease-in-out;
+}
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--head-color-);
+  transition: color 0.6s;
+}
+.attribution a {
+  color: #0079ff;
+  transition: color 0.6s;
 }
 /* RESET */
 .container {
@@ -111,7 +125,7 @@ input {
   justify-content: center;
   cursor: pointer;
   color: var(--darklight-color-);
-  transition: color 0.6s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .header .theme .theme-btn i {
   margin-right: 1rem;
@@ -123,12 +137,13 @@ input {
 
 :root[color-mode="light"] .dark--hidden {
   display: none;
-  transition: display 0.6s ease-in-out;
+  transition: display 0.3s ease-in-out;
 }
 :root[color-mode="dark"] .light--hidden {
   display: none;
-  transition: display 0.6s ease-in-out;
+  transition: display 0.3s ease-in-out;
 }
+
 /* HEADER */
 
 /* SEARCH */
@@ -142,7 +157,6 @@ input {
   background-color: var(--search-bg-color-);
   padding: 0.5rem 1rem;
   border-radius: 1rem;
-  transition: background-color 0.6s ease-in-out;
 }
 
 .search img {
@@ -161,7 +175,7 @@ input {
   font-family: inherit;
   background-color: var(--search-bg-color-);
   font-size: 1.3rem;
-  transition: color 0.6s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 .search .search-button {
   display: flex;
@@ -175,8 +189,9 @@ input {
   cursor: pointer;
   font-weight: 700;
   font-size: 1.6rem;
-  transition: background-color color 0.6s ease-in-out;
+  transition: background-color color 0.3s ease-in-out;
 }
+
 /* SEARCH */
 
 /* PROFILE */
@@ -190,7 +205,7 @@ input {
   border-radius: 1rem;
   width: 100%;
   padding: 1rem;
-  transition: background-color 0.6s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .profile .profile-header {
@@ -221,7 +236,7 @@ input {
   right: 0;
   font-size: 1.5rem;
   color: var(--darklight-color-);
-  transition: color 0.6s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .profile .profile-header .profile-info a {
@@ -243,10 +258,10 @@ input {
 }
 
 .profile .profile-main .profile-bio {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: var(--search-color-);
   margin-top: 2rem;
-  transition: color 0.6s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 .profile .profile-main .profile-stats {
@@ -255,7 +270,7 @@ input {
   align-items: center;
   justify-content: space-between;
   background-color: var(--body-bg-color-);
-  transition: color 0.6s ease-in-out;
+  transition: background-color color 0.3s ease-in-out;
 }
 
 .row {
@@ -267,9 +282,10 @@ input {
 
 .profile .profile-main .profile-about .row p {
   color: var(--search-color-);
+  font-size: 1rem;
   width: 100%;
   margin: 1rem;
-  transition: color 0.6s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
 @media only screen and (max-width: 600px) {

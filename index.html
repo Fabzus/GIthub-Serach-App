@@ -28,17 +28,17 @@
         <div class="search">
             <img src="assets/icon-search.svg" alt="" />
             <div class="search-bar">
-                <input type="text" placeholder="Search Github username..." value="">
+                <input id="input" type="text" placeholder="Search Github username..." value="">
                 
             </div>
-            <div class="search-button">Search</div>
+            <div id="btn" class="search-button">Search</div>
           </div>
         
         <div class="profile">
 
                 <div class="profile-header">
-                <div class="profile-pic">
-                    <a id="profilePic" href=""><img  src="assets/image-user-placeholder.png" alt=""></a>
+                <div id="profilePic" class="profile-pic">
+                    <a  href=""><img  src="assets/image-user-placeholder.png" alt=""></a>
                 </div>
                 <div class="profile-info">
                     <h2 id="name">Name</h2>
@@ -53,36 +53,36 @@
                 <div class="profile-stats main">
                     <ul>
                         <li>Repos</li>
-                        <li>8</li>
+                        <li id="repos">8</li>
                     </ul>
                     <ul>
                         <li>Followers</li>
-                        <li>3965</li>
+                        <li id="followers">3965</li>
                     </ul>
                     <ul>
                         <li>Following</li>
-                        <li>9</li>
+                        <li id="following">9</li>
                     </ul>
                 </div>
                 <div class="profile-about main"> 
                     <div class="row">
                         <div class="location row">
                             <img src="assets/icon-location.svg" alt="location">
-                            <p>Not Available</p>
+                            <p id="where">Not Available</p>
                         </div>
                         <div class="twitter row">
                             <img src="assets/icon-twitter.svg" alt="twitter">
-                            <p>Not Available</p>
+                            <p id="twitter">Not Available</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="website row">
                             <img src="assets/icon-website.svg" alt="website">
-                            <p>Not Available</p>
+                            <p id="website">Not Available</p>
                         </div>
                         <div class="company row">
                             <img src="assets/icon-company.svg" alt="company">
-                            <p>Not Available</p>
+                            <p id="company">Not Available</p>
                         </div>
                     </div>
                 </div>
