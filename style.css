@@ -38,6 +38,7 @@ body {
   background-color: var(--body-bg-color-);
   width: 80%;
   margin: auto;
+  height: 100vh;
 }
 
 ul {
@@ -48,19 +49,51 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
 /* RESET */
 .container {
-  height: 100vh;
+  height: calc(100vh - 15px);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: min(100%, 80rem);
+  margin: auto;
+  padding: 1rem;
+}
+
+input {
+  all: unset;
 }
 
 /* HEADER */
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header .theme .theme-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.header .theme .theme-btn i {
+  margin-right: 1rem;
+}
+.header .theme .theme-btn img {
+  width: 2rem;
+  height: 2rem;
+}
 /* HEADER */
 
 /* SEARCH */
+
+
 /* SEARCH */
 
 /* PROFILE */
