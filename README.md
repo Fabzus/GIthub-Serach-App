@@ -21,8 +21,8 @@
 
 ### Links
 
-- Solution URL: [github](https://github.com/Fabzus/qr-code-challenge.github.io)
-- Live Site URL: [github](https://fabzus.github.io/qr-code-challenge.github.io/)
+- Solution URL: [github](https://github.com/Fabzus/GIthub-Serach-App)
+- Live Site URL: [github](https://fabzus.github.io/GIthub-Serach-App/)
 
 ## My process
 
