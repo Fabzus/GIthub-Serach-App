@@ -1,5 +1,6 @@
 const input = document.querySelector("#input");
 const btn = document.querySelector("#btn");
+const loading = document.querySelector("#loading");
 
 const profilePic = document.querySelector("#profilePic");
 const name = document.querySelector("#name");
@@ -15,20 +16,36 @@ const twitter = document.querySelector("#twitter");
 const website = document.querySelector("#website");
 const company = document.querySelector("#company");
 
-btn.addEventListener("click", () => {
+btn.addEventListener("click", (e) => {
+  e.preventDefault();
   let url = `https://api.github.com/users/${input.value}`;
-  async function getUrl() {
-    const res = await fetch(url);
-    const data = await res.json();
+  if (input.value) {
+    loading.style.display = "block";
+    setTimeout(() => {
+      getUserDetails(url);
+    }, 2000);
+  } else {
+    input.value = "Please enter a user first";
+    input.style.color = "red";
+    setTimeout(() => {
+      input.value = "";
+      input.style.color = "var(--search-color-)";
+    }, 3000);
+  }
 
+  async function postData(data) {
+    loading.style.display = "none";
     profilePic.innerHTML = `
-    <a  href="${data.html_url}"><img  src="${data.avatar_url}" alt="${data.login}"></a>
-    `;
+  <a  href="${data.html_url}"><img  src="${data.avatar_url}" alt="${data.login}"></a>
+  `;
 
-    name.innerHTML = `${data.name}`;
-    date.innerHTML = `date joined: ${data.created_at}`;
+    name.innerHTML =
+      data.name === "" || data.name === null
+        ? (name.style.display = "none")
+        : ((name.style.display = "block"), `${data.name}`);
+
+    date.innerHTML = `date joined: ${data.created_at.substring(0, 10)}`;
     username.innerHTML = `@${data.login}`;
-
     repos.innerHTML = `${data.public_repos}`;
     followers.innerHTML = `${data.followers}`;
     following.innerHTML = `${data.following}`;
@@ -42,7 +59,6 @@ btn.addEventListener("click", () => {
       where.innerHTML = "No location";
     } else {
       where.innerHTML = data.location;
-
       where.style.fontWeight = "700";
     }
 
@@ -50,15 +66,13 @@ btn.addEventListener("click", () => {
       twitter.innerHTML = "No twitter";
     } else {
       twitter.innerHTML = data.twitter_username;
-
       twitter.style.fontWeight = "700";
     }
 
-    if (data.blog === " " || data.blog === null) {
+    if (data.blog === "" || data.blog === null) {
       website.innerHTML = "No website";
     } else {
       website.innerHTML = data.blog;
-
       website.style.fontWeight = "700";
     }
 
@@ -69,8 +83,28 @@ btn.addEventListener("click", () => {
       company.style.fontWeight = "700";
     }
   }
-  getUrl();
-  input.value = "";
+
+  async function getUserDetails(api) {
+    let quey = await fetch(api)
+      .then(async (query) => {
+        return await query.json();
+      })
+      .then((res) => {
+        if (res.message) {
+          input.value = "There is no such user";
+          input.style.color = "red";
+          loading.style.display = "none";
+          setTimeout(() => {
+            input.value = "";
+            input.style.color = "var(--search-color-)";
+          }, 3000);
+        } else {
+          postData(res);
+          input.value = "";
+        }
+      })
+      .catch((e) => console.log(e));
+  }
 });
 
 const toggle = function (e) {

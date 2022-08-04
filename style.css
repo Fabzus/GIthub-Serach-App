@@ -194,6 +194,40 @@ input {
 
 /* SEARCH */
 
+/* LOADING */
+.loading {
+  display: none;
+}
+.loading p {
+  color: var(--head-color-);
+}
+.loading p::after {
+  content: "";
+  display: inline;
+  color: inherit;
+  animation: loader 2s infinite;
+}
+
+@keyframes loader {
+  0% {
+    content: ".";
+  }
+  25% {
+    content: "..";
+  }
+  50% {
+    content: "...";
+  }
+  75% {
+    content: "..";
+  }
+  100% {
+    content: ".";
+  }
+}
+
+/* LOADING */
+
 /* PROFILE */
 .profile {
   margin: 2rem 0;
